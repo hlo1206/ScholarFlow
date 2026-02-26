@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "ScholarFlow",
+    "slug": "scholarflow",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",  // Hum ise abhi ignore kar rahe hain
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png", // Ise bhi ignore kar rahe hain
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.scholarflow.app" // Ye unique ID bahut zaroori hai
+    }
+  }
+}```
+*(Note: Assets wali lines chhod do, unki zarurat abhi nahi hai)*.
+
+**3. `eas.json`**
+*   Ye file batayegi ki humein `.apk` banana hai (default mein wo `.aab` banata hai jo Play Store ke liye hota hai). File banao aur ye dalo:
+
+```json
+{
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {}
+  }
+}
